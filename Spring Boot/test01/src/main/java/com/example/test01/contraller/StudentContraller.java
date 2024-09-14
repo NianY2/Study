@@ -14,6 +14,7 @@ public class StudentContraller {
 
     @GetMapping("/student/{id}")
     public Student  getStudentById(@PathVariable long id){
+        
         return studentService.getStudentById(id);
     }
 }

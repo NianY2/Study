@@ -1,4 +1,4 @@
-package app977;
+package P977;
 
 import java.util.Arrays;
 //https://leetcode.cn/problems/squares-of-a-sorted-array/description/
