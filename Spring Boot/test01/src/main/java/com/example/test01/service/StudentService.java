@@ -1,7 +1,9 @@
 package com.example.test01.service;
 
 import com.example.test01.dao.Student;
+import com.example.test01.dto.StudentDTO;
 
 public interface StudentService {
-    Student getStudentById(long id);
+    StudentDTO getStudentById(long id);
+    Long addNewStudent(StudentDTO studentDTO);
 }
