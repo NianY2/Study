@@ -17,7 +17,7 @@ class ListNode {
     }
 }
 
-public class P02 {
+public class Test01 {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = new ListNode(),tail = head;
         int carry = 0;
@@ -50,7 +50,7 @@ public class P02 {
 
         ListNode l1 = new  ListNode(2,new ListNode(4,new ListNode(3)));
         ListNode l2 = new  ListNode(5,new ListNode(6,new ListNode(4)));
-        ListNode result = P02.addTwoNumbers(l1,l2);
+        ListNode result = Test01.addTwoNumbers(l1,l2);
         while (result != null){
             System.out.print(result.val+",");
             result = result.next;
