@@ -3,23 +3,23 @@ package P119;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test01 {
+public class Test02 {
     public static List<Integer> getRow(int rowIndex) {
-        rowIndex= rowIndex+1;
-        List<List<Integer>> res = new ArrayList<>();
-        for (int i = 0; i < rowIndex; i++) {
+
+       List<Integer> res = new ArrayList<>();
+        for (int i = 0; i <= rowIndex; i++) {
             List<Integer> row = new ArrayList<>();
             for (int j = 0; j <= i; j++) {
                 if(j==0 || j==i){
                     row.add(1);
                 }else {
-                    row.add(res.get(i-1).get(j)+res.get(i-1).get(j-1));
+                    row.add(res.get(j)+res.get(j-1));
                 }
             }
-            res.add(row);
+            res = row;
         }
 
-        return  res.get(rowIndex-1);
+        return res;
     }
 
     public static void main(String[] args) {
