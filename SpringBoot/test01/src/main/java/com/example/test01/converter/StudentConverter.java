@@ -15,7 +15,6 @@ public class StudentConverter {
 
     public  static Student converterStudent(StudentDTO studentDTO){
         Student student = new Student();
-//        student.setId(studentDTO.getId());
         student.setName(studentDTO.getName());
         student.setEmail(studentDTO.getEmail());
         student.setAge(studentDTO.getAge());
