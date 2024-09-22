@@ -1,6 +1,6 @@
 package com.example.test01.controller;
 
-import com.example.test01.utils.GlobalException;
+import com.example.test01.utils.Config.FileConfig;
 import com.example.test01.utils.Response;
 import com.example.test01.dto.StudentDTO;
 import com.example.test01.service.StudentService;
@@ -11,8 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.UUID;
 
 @RestController
@@ -56,8 +54,9 @@ public class StudentController {
         if(file == null || file.isEmpty()){
             return Response.newFail("Upload failed, please select file",400);
         }
+        FileConfig fileConfig = new FileConfig();
         // 文件保存目录
-        String filePath = "D:/flies/springboot/";
+        String filePath = fileConfig.getPath();
 
         // 验证文件夹
         File folder = new File(filePath);
