@@ -1,6 +1,7 @@
 package com.example.test01.utils;
 
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -12,7 +13,7 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 /**
  * 全局异常信息处理类
  */
-//@Slf4j
+@Slf4j
 @RestControllerAdvice
 public class GlobalException {
 
@@ -25,7 +26,7 @@ public class GlobalException {
     */
     @ExceptionHandler(value = BusinessException.class)
     public Response businessException(BusinessException e) {
-        System.out.println(e.getMessage());
+        log.error("业务异常 => code: {}, 原因是: {}", e.getCode(), e.getMessage());
         return Response.newFail(e.getMessage(),e.getCode());
     }
 
@@ -37,7 +38,7 @@ public class GlobalException {
     @ExceptionHandler(value = Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public Response globalException(Exception e) {
-        System.out.println("服务器错误："+e.getMessage());
+        log.error("未知(600)异常 => 原因是: {}", e.getMessage());
         e.printStackTrace();
         return Response.codeAndMessage(HttpCodeEnum.RC600);
     }
@@ -62,6 +63,7 @@ public class GlobalException {
     @ExceptionHandler(value = MaxUploadSizeExceededException.class)
     @ResponseStatus(HttpStatus.PAYLOAD_TOO_LARGE)
     public Response maxUploadSizeExceededException(HttpServletRequest e) {
+        log.error("超过最大上传文件大小错误");
         return Response.codeAndMessage(HttpCodeEnum.RC413);
     }
 
