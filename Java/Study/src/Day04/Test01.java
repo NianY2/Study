@@ -5,7 +5,7 @@ public class Test01 {
         double[] list1 = {12.9, 53.54, 75.0, 99.1, 3.14};
         double min_num = list1[0];
         for (int i = 1; i < list1.length; i++) {
-            if(min_num < list1[i]){
+            if(min_num > list1[i]){
                 min_num = list1[i];
             }
         }
