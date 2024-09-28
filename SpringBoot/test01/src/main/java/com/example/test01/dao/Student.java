@@ -18,6 +18,10 @@ public class Student {
     @Column(name = "name")
     private String name;
 
+    @Schema(description = "密码")
+    @Column(name = "password")
+    private String password;
+
     @Schema(description = "邮箱")
     @Column(name = "email")
     private  String email;

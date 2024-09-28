@@ -14,6 +14,9 @@ import lombok.Data;
  */
 @Data
 public class Response <T>{
+    private static final int DEFAULT_FAIL_CODE = 500; // 定义默认失败状态码
+    private static final String DEFAULT_FAIL_MSG = "fail"; // 定义默认失败信息
+
     @Schema(description = "数据")
     private T data=null;
 
@@ -26,48 +29,37 @@ public class Response <T>{
     @Schema(description = "状态码")
     private int code=0;
 
-    public static <K> Response<K>  newSuccess(K data){
-        Response<K> response = new Response<K>();
-        response.setData(data);
-        return response;
+
+    private Response<T> set(T data, String msg, int code, boolean state) {
+        this.data = data;
+        this.msg = msg;
+        this.code = code;
+        this.state = state;
+        return this;
     }
 
-    public static <K> Response<K>  newSuccess(K data,String msg){
-        Response<K> response = new Response<K>();
-        response.setData(data);
-        response.setMsg(msg);
-        return  response;
+    public static <K> Response<K> newSuccess(K data) {
+        return new Response<K>().set(data, "success", 0, true);
     }
 
-    public static <K> Response<K>  newSuccess(K data,String msg,int code){
-        Response<K> response = new Response<K>();
-        response.setData(data);
-        response.setMsg(msg);
-        response.setCode(code);
-        return  response;
+    public static <K> Response<K> newSuccess(K data, String msg) {
+        return new Response<K>().set(data, msg, 0, true);
     }
 
-    public static <K> Response<K>  newFail(){
-        Response<K> response = new Response<K>();
-        response.setState(false);
-        response.setMsg("fail");
-        response.setCode(500);
-        return response;
-    }
-    public static <K> Response<K>  newFail(String msg){
-        Response<K> response = new Response<K>();
-        response.setState(false);
-        response.setMsg(msg);
-        response.setCode(500);
-        return response;
+    public static <K> Response<K> newSuccess(K data, String msg, int code) {
+        return new Response<K>().set(data, msg, code, true);
     }
 
-    public static <K> Response<K>  newFail(String msg,int code){
-        Response<K> response = new Response<K>();
-        response.setState(false);
-        response.setMsg(msg);
-        response.setCode(code);
-        return response;
+    public static <K> Response<K> newFail() {
+        return new Response<K>().set(null, DEFAULT_FAIL_MSG, DEFAULT_FAIL_CODE, false);
+    }
+
+    public static <K> Response<K> newFail(String msg) {
+        return new Response<K>().set(null, msg, DEFAULT_FAIL_CODE, false);
+    }
+
+    public static <K> Response<K> newFail(String msg, int code) {
+        return new Response<K>().set(null, msg, code, false);
     }
 
     /**
@@ -76,11 +68,7 @@ public class Response <T>{
      * @param httpCodeEnum 枚举信息
      * @return JsonResult
      */
-    public static  <K> Response<K> codeAndMessage(HttpCodeEnum httpCodeEnum) {
-        Response<K> response = new Response<K>();
-        response.setState(false);
-        response.setMsg(httpCodeEnum.getMessage());
-        response.setCode(httpCodeEnum.getCode());
-        return response;
+    public static <K> Response<K> codeAndMessage(HttpCodeEnum httpCodeEnum) {
+        return new Response<K>().set(null, httpCodeEnum.getMessage(), httpCodeEnum.getCode(), false);
     }
 }

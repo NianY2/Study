@@ -7,6 +7,7 @@ import com.example.test01.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Operation;
+//import io.swagger.v3.oas.annotations.ApiOperation;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -75,5 +76,13 @@ public class StudentController {
             e.printStackTrace();
             return  Response.newFail("Upload failed",50001);
         }
+    }
+
+    @PostMapping("/login/")
+    @Operation(summary = "登入")
+    public Response login(@RequestParam("username") String username,@RequestParam("password") String password){
+        System.out.println(username);
+        System.out.println(password);
+        return  Response.newSuccess("1");
     }
 }
