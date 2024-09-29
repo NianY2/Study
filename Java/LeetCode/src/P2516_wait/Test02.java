@@ -2,6 +2,7 @@ package P2516_wait;
 
 //https://leetcode.cn/problems/take-k-of-each-character-from-left-and-right/
 // 滑动窗口
+
 public class Test02 {
     public static int takeCharacters(String s, int k) {
         char[] sCharArray = s.toCharArray();
