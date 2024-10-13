@@ -1,3 +1,4 @@
+package hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
@@ -8,46 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class Test01 {
-//    /*  输出某个目录的目录或文件 */
-//    public  static  void  lsDir(Configuration conf, String remoteDir) throws IOException{
-//        FileSystem fs = FileSystem.get(conf);
-//        Path file = new Path(remoteDir);
-//        FileStatus[] fileStatuses = fs.listStatus(file);
-//        for (FileStatus fileStatus : fileStatuses){
-//            System.out.println(fileStatus.getPath());
-//        }
-//        fs.close();
-//    }
-//
-//    /* 验证文件是否存在 */
-//    public  static  boolean exists(Configuration conf, String path) throws IOException  {
-//        FileSystem fs = FileSystem.get(conf);
-//        boolean flag = fs.exists(new Path(path));
-//        fs.close();
-//        return flag;
-//    }
-//
-//
-//    /*  创建文件夹 */
-//    public  static  boolean mkdir(Configuration conf, String remoteDir) throws IOException {
-//        FileSystem fs = FileSystem.get(conf);
-//        Path dirPath = new Path(remoteDir);
-//        boolean result = fs.mkdirs(dirPath);
-//        fs.close();
-//        return result;
-//    }
-//
-//    /* 创建文件 */
-//    public static void touchz(Configuration conf, String remoteFilePath) throws IOException {
-//        FileSystem fs = FileSystem.get(conf);
-//        Path remotePath = new Path(remoteFilePath);
-//        FSDataOutputStream outputStream = fs.create(remotePath);
-//        outputStream.close();
-//        fs.close();
-//    }
-
-
+public class Test02 {
     public static void main(String[] args) throws IOException {
         Configuration conf = new Configuration();
 //        设置用户名
