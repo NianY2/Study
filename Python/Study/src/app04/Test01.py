@@ -8,5 +8,4 @@ print(s[::-1])
 #“四三二一”
 print(s[-4::-4])
 
-print(chr((ord("A")+5)%ord("Z")+ord("A")-1))
-print(chr((ord("F")+5)%ord("Z")+ord("A")-1))
+
