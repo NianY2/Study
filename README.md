@@ -8,3 +8,5 @@ git config --global user.email '1871263099@qq.com'
 git push Gitee master
 git push GitCode master
 ```
+
+`openEuler`

@@ -36,15 +36,20 @@
 """
 def tm(student):
     student[0] = student[0][:4]+'*'*7+student[0][11:]
-    student[1] = student[1][0] + '*' * (len(student[1])-1)
+    if len(student[1]) > 2:
+        student[1] = student[1][0] + '*' +student[1][2:]
+    else:
+        student[1] = student[1][0] + '*'
     student[2] = student[2][:3] + '*' * 4 + student[2][7:]
     return  student
 student_list = []
 num = int(input())
 if num <= 0:
     print("ERROR")
+    exit()
 for i in range(num):
-    student_list.append(tm(input().split()))
+    student_list.append(input().split())
 
-
+student_list = list(map(tm,student_list))
 print(student_list)
+
