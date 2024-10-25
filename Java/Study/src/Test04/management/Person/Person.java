@@ -1,4 +1,4 @@
-package Test04.management;
+package Test04.management.Person;
 
 public class Person {
     private String name;

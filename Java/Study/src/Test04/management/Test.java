@@ -1,5 +1,8 @@
 package Test04.management;
 
+import Test04.management.Person.Student;
+import Test04.management.Person.Teacher;
+
 public class Test {
     public static void main(String[] args) {
         Student student  = new Student("陈煜",22,"现代信息产业学院","软件工程","202212390606","06");
