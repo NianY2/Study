@@ -1,5 +1,6 @@
 package com.example.test01.controller;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.example.test01.utils.Config.FileConfig;
 import com.example.test01.utils.Response;
 import com.example.test01.dto.StudentDTO;
@@ -80,9 +81,18 @@ public class StudentController {
 
     @PostMapping("/login/")
     @Operation(summary = "登入")
-    public Response login(@RequestParam("username") String username,@RequestParam("password") String password){
-        System.out.println(username);
-        System.out.println(password);
-        return  Response.newSuccess("1");
+    public Response login(String username,String password){
+        // 此处仅作模拟示例，真实项目需要从数据库中查询数据进行比对
+        if("root".equals(username) && "123456".equals(password)) {
+            StpUtil.login(10001);
+            return  Response.newSuccess("登录成功");
+
+        }
+        return  Response.newSuccess("登录失败");
+    }
+
+    @RequestMapping("/isLogin")
+    public String isLogin() {
+        return "当前会话是否登录：" + StpUtil.isLogin();
     }
 }
