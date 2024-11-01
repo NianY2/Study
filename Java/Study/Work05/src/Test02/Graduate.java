@@ -11,6 +11,14 @@ public class Graduate implements StudentManageInterface,TeacherManageInterface{
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Graduate() { }
 
     public boolean isLoan(){
