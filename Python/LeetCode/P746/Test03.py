@@ -14,14 +14,14 @@ from typing import List
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
         n = len(cost)
-        dp = [0] * (n + 1)
-        for i in range(2, n + 1):
-            print(dp)
-            print(dp[i - 1],cost[i - 1], dp[i - 2],cost[i - 2])
-            dp[i] = min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2])
-            print(dp)
-            print("=============")
-        return dp[n]
+        # 得走完，即 [10,15,20] 到 20 以上
+        list1 = [0]*(n+1)
+        for i in range(2,n+1):
+            list1[i] = min(list1[i-2]+cost[i-2],list1[i-1]+cost[i-1])
+        print(list1)
+        return  list1.pop();
 if __name__ == '__main__':
+    print(Solution().minCostClimbingStairs([]))
+    print(Solution().minCostClimbingStairs([10, 15]))  # 10
     print(Solution().minCostClimbingStairs([10,15,20])) # 15
     print(Solution().minCostClimbingStairs([1,100,1,1,1,100,1,1,100,1])) #6
