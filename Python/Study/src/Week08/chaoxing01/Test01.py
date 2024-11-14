@@ -1,10 +1,9 @@
-# 例如有如下数学题。己知有一个数列：f(0) = 1，f(1) = 4，f(n + 2) = 2*f(n+ 1) +f(n)，其中 n 是大于 0 的整数，求 f(10) 的值。这道题可以使用递归来求得。下面程序将定义一个 fn() 函数，用于计算 f(10) 的值。
-# f(0) = 1，f(1) = 4，f(n + 2) = 2*f(n+ 1) +f(n)
-def f(n:int)->int:
-    if n == 0:
-        return  1
-    if n == 1:
-        return  4
-    return 2*f(n-1)+f(n-2)
+# 1. (简答题) 编写一函数，实现从18位的身份证号码中获取出身年月日，
+# 并以类似于“2006年08月12日”的形式输出自己的出生日期。
 
-print(f(10))
+def getBirthDateByIDCard(idCard:str)->str:
+    return f"{idCard[6:10]}年{idCard[10:12]}月{idCard[12:14]}日"
+
+if __name__ == '__main__':
+    print(getBirthDateByIDCard("43021219911104635X"))
+    print(getBirthDateByIDCard("341525195702263718"))

@@ -1,10 +1,10 @@
-# 用函数实现，list1=[1,2,5,6,7,9,78],求列表中不能被3整除的数？
-from typing import List, Optional
-
-
-def d(list1: List) -> Optional[int]:
-    for i in list1:
-        if i % 3 != 0:
-            return i
-
-print(d([1, 2, 5, 6, 7, 9, 78]))
+# 编写程序求1**2 - 2**2 + 3**2 +  4**2 +  ... + 99**2
+def test01(num1:int)->int:
+    res = 0
+    for i in range(1,num1+1):
+        if i % 2 != 0:
+            res += i**2
+        else:
+            res -= i**2
+    return res
+print(test01(99))
