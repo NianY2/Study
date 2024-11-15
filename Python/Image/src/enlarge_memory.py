@@ -2,7 +2,7 @@
 扩大图片内存
 待升级
 无法确定升级到具体的大小
-只能多次
+只能多次增大
 pip install Pillow
 """
 from PIL import Image
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     output_path_folder = "../image_res/"
     # 目标图片大小（MB）
     target_size_mb = 5
-
+    # 扩大文件内的每一张图片
     filenames = os.listdir(input_path_folder)
     for i in filenames:
         input_path = input_path_folder+i
