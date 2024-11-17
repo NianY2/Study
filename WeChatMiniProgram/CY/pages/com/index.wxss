@@ -1,0 +1,68 @@
+/* pages/com/index.wxss */
+.result {
+    flex-grow: 1;
+    flex-basis: 50%;
+    position: relative;
+}
+
+.result_num{
+    position:absolute;
+    font-size: 27pt;
+    bottom: 5vh;
+    right: 3vw;
+}
+.result_op{
+    position:absolute;
+    font-size: 15pt;
+    bottom: 1vh;
+    right: 3vw;
+}
+
+page {
+    background-color: #f0f0f0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+.bg{
+    background: #f0f0f0;
+   
+}
+
+
+
+.btns {
+    flex-basis: 50%;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-top: 1rpx solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.btns>view {
+    flex-grow: 1;
+    display: flex;
+}
+
+.btns>view>view {
+    border-bottom: 1rpx solid #ccc;
+    border-right: 1rpx solid #ccc;
+    flex-basis: 25%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+}
+
+.btns>view:last-child>view:first-child{
+    flex-basis: 50%;
+}
+
+.btns>view:last-child>view:last-child{
+    border-right: none;
+}

@@ -1,0 +1,25 @@
+<!--pages/from/index.wxml-->
+<view>
+    <form bindsubmit="submit">
+        <text>姓名：</text>
+        <input type="text" name="Name" value="{{ obj.Name }}" />
+        <text>性别：</text>
+        <radio-group name="gender">
+            <label wx:for="{{obj.Gender}}" wx:key="index">
+                <radio value="{{item.values}}" checked="{{ item.checked }}" />{{ item.name }}
+            </label>
+        </radio-group>
+        <text>爱好</text>
+        <checkbox-group name="skills">
+            <label wx:for="{{obj.Skill}}" wx:key="index">
+                <view>
+                    <checkbox value="{{item.value}}" checked="{{ item.checked }}" />
+                    {{ item.name }}
+                </view>
+            </label>
+        </checkbox-group>
+        <text>意见反馈：</text>
+        <textarea value="{{ Opinion }}" name="Opinion" style="border: 1px solid rgb(124, 124, 124);" />
+        <button form-type="submit">保存</button>
+    </form>
+</view>

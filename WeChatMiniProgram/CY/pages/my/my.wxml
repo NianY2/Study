@@ -1,0 +1,22 @@
+<!--pages/my/my.wxml-->
+<view>{{obj.name}}</view>
+<view>{{obj.phone}}</view>
+<view>{{obj.class}}</view>
+
+<view class="foods"> 
+    我喜欢的菜：
+    <text   
+    wx:for="{{ foods }}" wx:key="index"
+    bindtap="setSelect"  data-food="{{item}}"
+    >{{index}}. {{item}}</text>
+</view>
+
+<view wx:if="{{ select != null }}">
+    我选择的菜：{{ select }}
+</view>
+
+<view style="margin-top: 20px;">
+    <view wx:for="{{shop}}" wx:key="index">{{ item.name }}</view>
+</view>
+
+

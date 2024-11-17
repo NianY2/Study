@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<form bindsubmit="submit">
+    <view>
+        <view>用户名:</view>
+        <input type="text" name="username" id="" />
+    </view>
+    <view>
+        <view> 密码:</view>
+        <input type="text" password name="password" id="" />
+    </view>
+    <view>
+        <button type="primary" formType="submit">登入</button>
+    </view>
+</form>

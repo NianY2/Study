@@ -1,0 +1,36 @@
+/* pages/audio/audio.wxss */
+/* page{
+    padding: 10px;
+} */
+.imgBox {
+    width: 600rpx;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+}
+.imgBox image{
+    width: 100%;
+    border-radius: 15px;
+}
+.msg{
+    width: 600rpx;
+    margin: 10px auto;
+    text-align: center;
+}
+.msg .name{
+    font-weight: 600;
+}
+.msg .author{
+    font-size: 22rpx;
+    padding-left: 10px;
+}
+.progress{
+    width: 600rpx;
+    margin: 10px auto;
+}
+.btn{
+    margin: 0 auto;
+    width: 600rpx;
+    display: flex;
+    justify-content: space-around;
+}

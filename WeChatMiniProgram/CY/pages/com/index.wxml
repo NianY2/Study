@@ -1,0 +1,36 @@
+<!--pages/com/index.wxml-->
+<view class="result">
+    <view class="result_num">1</view>
+    <view class="result_op">+</view>
+</view>
+<view class="btns">
+    <view>
+        <view data-val="C" hover-class="bg" bindtap="btn" >C</view>
+        <view data-val="DEL" hover-class="bg" bindtap="btn">DEL</view>
+        <view data-val="%" hover-class="bg" bindtap="btn">%</view>
+        <view data-val="/" hover-class="bg" bindtap="btn">/</view>
+    </view>
+    <view>
+        <view data-val="7" hover-class="bg" bindtap="btn">7</view>
+        <view data-val="8" hover-class="bg" bindtap="btn">8</view>
+        <view data-val="9" hover-class="bg" bindtap="btn">9</view>
+        <view data-val="*" hover-class="bg" bindtap="btn">*</view>
+    </view>
+    <view>
+        <view data-val="4" hover-class="bg" bindtap="btn">4</view>
+        <view data-val="5" hover-class="bg" bindtap="btn">5</view>
+        <view data-val="6" hover-class="bg" bindtap="btn">6</view>
+        <view data-val="-" hover-class="bg" bindtap="btn">-</view>
+    </view>
+    <view>
+        <view data-val="1" hover-class="bg" bindtap="btn">1</view>
+        <view data-val="2" hover-class="bg" bindtap="btn">2</view>
+        <view data-val="3" hover-class="bg" bindtap="btn">3</view>
+        <view data-val="+" hover-class="bg" bindtap="btn">+</view>
+    </view>
+    <view>
+        <view data-val="0" hover-class="bg" bindtap="btn">0</view>
+        <view data-val="." hover-class="bg" bindtap="btn">.</view>
+        <view data-val="=" hover-class="bg" bindtap="btn">=</view>
+    </view>
+</view>

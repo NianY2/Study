@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view>
+    <navigator  wx:for="{{ obj }}" wx:key="index" url="/pages/audio/audio?id={{ item.id }}">
+        <view class="msg">
+            <text class="name">{{ item.name }}</text>
+            <text class="author">{{ item.author }}</text>
+        </view>
+    </navigator>
+</view>

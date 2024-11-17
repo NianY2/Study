@@ -1,0 +1,9 @@
+<!--pages/newsInfo/newsInfo.wxml-->
+<view>
+    <view class="title">
+        {{ obj.title }}
+    </view>
+    <view class="content">
+        {{ obj.content }}
+    </view>
+</view>

@@ -1,0 +1,7 @@
+/* pages/my/my.wxss */
+.foods{
+    margin-top: 20px;
+}
+.foods text{
+    display: block;
+}

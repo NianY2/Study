@@ -1,0 +1,26 @@
+<!--pages/audio/audio.wxml-->
+<view>
+    <!-- <audio poster="{{url + obj.poster}}" name="{{obj.name}}" author="{{obj.author}}" src="{{url + obj.src}}" id="myAudio" controls loop></audio> -->
+    <view>
+    <!-- {{num}} -->
+    <!-- {{ num1 }}/{{num2 }} -->
+        <view class="imgBox">
+            <image src="{{ url+obj.poster }}" mode="widthFix" />
+        </view>
+        <view class="progress">
+            <progress percent="{{ num }}"/>
+        </view>
+        <view class="msg">
+            <text class="name">{{ obj.name }}</text>
+            <text class="author">{{ obj.author }}</text>
+        </view>
+        <view class="btn">
+            <view><button size="mini">上</button> </view>
+            <view bindtap="upt">
+            <button size="mini" wx:if="{{isPlay}}">暂停</button>
+            <button size="mini" wx:if="{{!isPlay}}">播放</button>
+            </view>
+            <view><button size="mini">下</button></view>
+        </view>
+    </view>
+</view>

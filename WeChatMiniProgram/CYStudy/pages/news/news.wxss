@@ -1,0 +1,11 @@
+/* pages/news/news.wxss */
+page{
+    padding: 10px;
+    box-sizing: border-box;
+}
+navigator{
+    margin-top: 10px;
+}
+.pubtime{
+    color: rgb(138, 138, 138);
+}

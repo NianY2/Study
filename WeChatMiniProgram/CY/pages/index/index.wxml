@@ -1,0 +1,51 @@
+<!--index.wxml-->
+
+<view>
+    <progress percent="{{percent_num}}"  stroke-width="3"/>
+</view>
+
+<!-- {{ obj.name }} -->
+
+<!-- <view class="msg">
+    <view style="text-align: center;font-weight: 600;margin-bottom: 10px;"> 
+        CY
+    </view>
+    <view>
+        <text class="title">系部：</text><text>计算机工程系</text>
+    </view>
+    <view>
+        <text  class="title">专业：</text><text>软件技术</text>
+    </view>
+    <view>
+        <text  class="title">班级：</text><text>21软件1班</text>
+    </view>
+    <view>
+        <text class="title">姓名：</text><text>陈煜</text>
+    </view>
+    <view>
+        <text class="title">学号：</text><text>32102140108</text>
+    </view>
+</view> -->
+<!-- <view style="margin-top: 10px;">
+    <button bindtap="getObj">加载</button>
+</view> -->
+<view class="com">
+    <view>
+        <text>请输入第1个数字</text>
+        <input type="text" model:value="{{ num1 }}"/>
+    </view>
+    <view>
+        <text>请输入第2个数字</text>
+        <input type="text" model:value="{{ num2 }}"/>
+    </view>
+
+    <button bindtap="getMaxnum" data-data="{{num1}}" style="margin-top: 10px;">确定</button>
+    <view>{{res}}</view>
+    
+    <!-- 2 -->
+    <view wx:if="{{num1 != null && num2 != null}}">
+        <view wx:if="{{ num1>num2 }}">第一个数字大</view>
+        <view wx:if="{{ num1==num2 }}">相等</view>
+        <view wx:if="{{ num1<num2 }}">第二个数字大</view>
+    </view>
+</view>

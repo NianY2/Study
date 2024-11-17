@@ -1,0 +1,21 @@
+/**index.wxss**/
+.msg view{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.title{
+    display: inline-block;
+    width: 100rpx;
+    text-align: left;
+}
+.com{
+    width: 80%;
+    margin: 10px auto;
+}
+.com text{
+    font-weight: 600;
+}
+input{
+    border-bottom: 1px solid rgb(82, 82, 82);
+}

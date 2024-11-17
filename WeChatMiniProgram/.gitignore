@@ -1,0 +1,3 @@
+# 忽略以下文件和目录
+/.DS_Store
+project.private.config.json

@@ -1,0 +1,11 @@
+/* pages/login/login.wxss */
+page{
+    padding: 15rpx;
+    box-sizing: border-box;
+}
+input{
+    border-bottom: 1px solid rgb(185, 185, 185);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    /* width: 100%; */
+}

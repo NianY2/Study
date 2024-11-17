@@ -1,0 +1,9 @@
+<!--pages/news/news.wxml-->
+<view>
+    <navigator wx:for="{{ obj }}" wx:key="index" url="/pages/newsInfo/newsInfo?id={{item.id}}" >
+        {{ item.title }}
+        <view class="pubtime">
+            {{ item.pubtime }}
+        </view>
+    </navigator>
+</view>
