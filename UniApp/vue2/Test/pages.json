@@ -1,0 +1,73 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/news/news",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/video/video",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/topic/topic",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/news/news",
+				"iconPath": "static/news/shouye.png",
+				"selectedIconPath": "static/news/hxw.png",
+				"text": "新闻"
+			},
+			{
+				"pagePath": "pages/video/video",
+				"iconPath": "static/news/spy.png",
+				"selectedIconPath": "static/news/spc.png",
+				"text": "视频"
+			},
+			{
+				"pagePath": "pages/topic/topic",
+				"iconPath": "static/news/hty.png",
+				"selectedIconPath": "static/news/htc.png",
+				"text": "话题"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/news/wdly.png",
+				"selectedIconPath": "static/news/wdlc.png",
+				"text": "未登录"
+			}
+		]
+	}
+}
