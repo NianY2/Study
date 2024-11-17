@@ -95,8 +95,10 @@ if __name__ == "__main__":
     login_KeyUrl = "https://jwxt.gcc.edu.cn/xtgl/login_getPublicKey.html?time="
     # 登录后的课表URL
     table_url = "http://jwxt.gcc.edu.cn/kbcx/xskbcx_cxXsgrkb.html"
+    print("=========================")
     num = input("学号：")
     pwd = input("密码：")
+    print("=========================")
     zspt = Longin(num, pwd, login_url, login_KeyUrl)
     response_cookies = zspt.Longin_Home()
     table = TimeTable(response_cookies, table_url)
