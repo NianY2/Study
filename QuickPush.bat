@@ -1,7 +1,7 @@
 git add .
 git commit -m "quick lock in"
 @REM Gitee
-git push Gitee master
+@REM git push Gitee master
 @REM Gihub
 git push Github master
 @REM GitCode
