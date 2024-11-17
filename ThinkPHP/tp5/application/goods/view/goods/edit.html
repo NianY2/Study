@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<form action="{:url('goods/save')}" method="post">
+			<input type="hidden"  value="{$data.id}" name="id" />
+			<table border="1" cellspacing="0" cellpadding="10" align="center">
+				<tr>
+					<th colspan="2">修改商品</th>
+				</tr>
+				<!-- <tr>
+					<td>商品编号</td>
+					<td><input type="text"  value="{$data.id}" name="id" /></td>
+				</tr> -->
+				<tr>
+					<td>商品编号</td>
+					<td><input type="text" id="" value="{$data.product_id}" name="product_id" /></td>
+				</tr>
+				<tr>
+					<td>商品名称</td>
+					<td><input type="text" id="" value="{$data.product_name}" name="product_name" /></td>
+				</tr>
+				<tr>
+					<td>商品价格</td>
+					<td><input type="text" id="" value="{$data.price}" name="price" /></td>
+				</tr>
+				<tr>
+					<td>商品供应商</td>
+					<td><input type="text" id="" value="{$data.suppliers}" name="suppliers" /></td>
+				</tr>
+				<tr>
+					<td>商品描述</td>
+					<td>
+						<textarea name="describes" id="" cols="30" rows="10">{$data.describes}</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" id="" name="" value="提交" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    a {text-decoration: none;}
+
+    .pagination {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pagination a{font-size: 18px;}
+    .pagination .active{
+      font-size: 18px;
+    }
+
+    .pagination li {
+      padding: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <table border="1" cellspacing="0" cellpadding="10" align="center">
+    <tr>
+      <th colspan="7">商品列表<a href="add">添加商品</a></th>
+
+    </tr>
+    <tr>
+      <th>ID</th>
+      <th>商品编号</th>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>商品供应商</th>
+      <!-- <th>商品描述</th> -->
+      <th>操作</th>
+    </tr>
+
+    {foreach $data as $v}
+    <tr>
+      <td>{$v.id}</td>
+      <td>{$v.product_id}</td>
+      <td>{$v.product_name}</td>
+      <td>{$v.price}</td>
+      <td>{$v.suppliers}</td>
+      <!-- <td>{$v.describes}</td> -->
+      <td>
+        <!-- <a href="{:url('goods/del')}?id={$v.id}">删除</a> -->
+        <!-- <a href="{:url('goods/edit')}?id={$v.id}">修改 </a> -->
+        <a href="{:url('goods/del',array('id'=>$v['id']))}">删除</a>
+        <a href="{:url('goods/edit')}?id={$v.id}">修改 </a>
+      </td>
+    </tr>
+    {/foreach}
+    <tr>
+      <th colspan="7">
+        {$page|raw}
+      </th>
+    </tr>
+  </table>
+</body>
+
+</html>
