@@ -1,5 +1,6 @@
 git add .
-git commit -m "quick lock in"
+set /p var=CommitMessage:
+git commit -m %var%
 @REM Gitee
 git push Gitee master
 @REM Gihub
