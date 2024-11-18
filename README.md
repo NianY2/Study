@@ -1,5 +1,6 @@
 * CSDN:[https://blog.csdn.net/qq_59636442](https://blog.csdn.net/qq_59636442)
 * 力扣:[https://leetcode.cn/u/distracted-sahatnp/](https://leetcode.cn/u/distracted-sahatnp/)
+* 蓝桥杯：[https://www.lanqiao.cn/users/3181306/](https://www.lanqiao.cn/users/3181306/)
 * Gitee:[https://gitee.com/REMOTE_CY](https://gitee.com/REMOTE_CY)
 * Github:[https://github.com/NianY2](https://github.com/NianY2)
 * GitCode[https://gitcode.com/qq_59636442](https://gitcode.com/qq_59636442)
