@@ -8,16 +8,16 @@ public class TestRandom {
         Random random = new Random();
         String allChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         int num =  random.nextInt(allChars.length());
-        StringBuffer stringBuffer = new  StringBuffer();
-        stringBuffer.append(allChars.charAt(num));
-        return  stringBuffer.toString();
+        StringBuilder stringBuilder = new  StringBuilder();
+        stringBuilder.append(allChars.charAt(num));
+        return  stringBuilder.toString();
     }
     public String getRandom(int len){
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < len; i++) {
-            stringBuffer.append(getRandom());
+            stringBuilder.append(getRandom());
         }
-        return  stringBuffer.toString();
+        return  stringBuilder.toString();
     }
     public static void main(String[] args) {
         TestRandom testRandom = new TestRandom();

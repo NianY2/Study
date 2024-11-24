@@ -4,6 +4,7 @@ from email import policy
 from email.parser import BytesParser
 from email.header import decode_header, make_header
 from email.headerregistry import UniqueDateHeader
+from  datetime import  datetime
 import re,os
 from xml.dom.minidom import parse
 
@@ -89,9 +90,9 @@ class JDInvoiceDownload:
             # 解析邮件内容
             email_parser = BytesParser(policy=policy.default)  # 创建一个邮件解析器
             email = email_parser.parsebytes(email_content)  # 解析邮件内容，返回一个邮件对象
-            email_time =  self.get_email_time(email)
-            print("email_time: ",email_time)
-            if email_time == self.target_time and  self.check_email_from(email):  # 如果发件人地址与指定的目标邮件地址一致，对邮件进行处理
+            email_time = datetime.strptime(self.get_email_time(email), "%Y-%m-%d")
+            target_time = datetime.strptime(self.target_time, "%Y-%m-%d")
+            if email_time < target_time and  self.check_email_from(email):  # 如果发件人地址与指定的目标邮件地址一致，对邮件进行处理
                 email_body = self.get_payload(email)  # 获取邮件正文
 
                 if self.check_invoice_target_addr(email_body):
@@ -184,7 +185,7 @@ if __name__ == '__main__':
         target_email='"京东JD.com" <customer_service@jd.com>', # 发件人
         file_path="D:\\Test", # 保存文件路径
         target_addr="广州", # 发票地址（不需要判断设置为None即可）
-        target_time="2024-11-10" # 发票时间 （不需要判断设置为None即可）
+        target_time="2024-11-11" # 发票时间 （不需要判断设置为None即可）
     )
     client.fetch_email()
     client.close()

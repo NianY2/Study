@@ -31,8 +31,6 @@ public class CalendarPrinter {
         printCalendarBody(localDate);
     }
     public static void main(String[] args) {
-
-
         while (true){
             Scanner sc = new Scanner(System.in);
             System.out.print("请输入年份：");
