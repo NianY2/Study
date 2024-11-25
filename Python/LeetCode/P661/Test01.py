@@ -2,7 +2,6 @@
 661. 图片平滑器
 https://leetcode.cn/problems/image-smoother/description/?envType=daily-question&envId=2024-11-18
 """
-import copy
 from typing import List
 
 
