@@ -28,7 +28,7 @@ class AI:
         if msg not in self.lt_map:
             print("我不知道你说什么")
         else:
-            print(self.lt_map(msg))
+            print(self.lt_map[msg])
         self.lt()
 
 if __name__ == '__main__':
