@@ -5,4 +5,4 @@ set /p var=CommitMessage:
 git commit -m %var%
 @REM Gitee
 git push
-pause "按任意键继续===="
+pause "======ok======"

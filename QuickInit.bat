@@ -6,4 +6,4 @@ git remote add Github https://github.com/NianY2/Study.git
 @REM GitCode
 git remote add GitCode https://gitcode.com/qq_59636442/Study.git
 
-timeout /t 5 /nobreak >nul
+pause "======ok======"

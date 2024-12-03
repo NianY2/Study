@@ -8,4 +8,4 @@ git push Github master
 @REM GitCode
 git push GitCode master
 
-timeout /t 5 /nobreak >nul
+pause "======ok======"
