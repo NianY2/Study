@@ -1,3 +1,4 @@
+cd ../../
 git add .
 set /p var=CommitMessage:
 git commit -m %var%
@@ -8,4 +9,4 @@ git push Github master
 @REM GitCode
 git push GitCode master
 
-pause "======ok======"
+pause
