@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -83,6 +82,7 @@ class  Books{
         book.setAuthor(sc.nextLine());
         System.out.print("价格：");
         book.setPrice(sc.nextFloat());
+        sc.nextLine();
         bookList.add(book);
         System.out.println("添加成功");
 
@@ -134,6 +134,7 @@ class  Books{
         book.setAuthor(sc.nextLine());
         System.out.print("价格：");
         book.setPrice(sc.nextFloat());
+        sc.nextLine();
         System.out.println("修改成功");
     }
     static public void println(){
@@ -155,7 +156,10 @@ public class Test03 {
                     "5 修改图书的信息\n" +
                     "6 退出系统，结束程序运行。");
             System.out.println("=======================================");
+            System.out.print("请输入编号：");
             int n = sc.nextInt();
+            // 消化换行符
+            sc.nextLine();
             switch (n){
                 case 1:
                     Books.add();
@@ -168,7 +172,7 @@ public class Test03 {
                     if(book!=null){
                         System.out.println(book);
                     }else {
-
+                        System.out.println("图书不存在");
                     }
                     break;
                 case 4:
