@@ -11,5 +11,5 @@
 UI 框架：`element-ui`  
 后端框架：`Django`、`Spring Boot`、`ThinkPHP`  
 数据库：`MySQL`、`Redis`、`MongoDB`  
-大数据：`Hadoop`、`HBase`  
+大数据：`Hadoop`、`HBase`、`MapReduced`、`Spark`  
 Linux：`Ubuntu`,`CentOS`、`openEuler`  

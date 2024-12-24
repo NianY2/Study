@@ -1,0 +1,5 @@
+快递单号, 城市, 费用
+A101, Beijing, 25
+A102, Shanghai, 30
+A103, Guangzhou, 20
+A104, Beijing, 35

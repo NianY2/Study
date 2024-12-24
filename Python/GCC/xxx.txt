@@ -1,0 +1,2 @@
+pip install pillow
+pyinstaller -F -w Test01.py
